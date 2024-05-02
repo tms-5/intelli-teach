@@ -1,0 +1,36 @@
+[
+    {
+        "strategy": 1,
+        "prompts": [
+            {
+                "version": "v0.5",
+                "prompt": " I would like you to act as an example generator for students. When confronted with new and complex concepts, adding many and varied examples helps students better understand those concepts. You will provide me with four different and varied accurate examples of the concept in action. The students level is {level} and the concept is {concept}. The examples should be clear, concise, and easy to understand."
+            },
+            {
+                "version": "v1.0",
+                "prompt": "As a {subject} teaching advisor, I need your help to deeply understand a complex {subject} concept through multiple varied examples. The students level is {level} and the concept is {concept}. Search for examples that illustrate the concept in different contexts and detail each example to aid students' comprehension. The examples should be clear, concrete, and engaging, and should help students understand the concept more abstractly, highlighting different aspects and nuances. Conclude with a summary that reinforces the key points and suggest additional questions for testing comprehension and further reflection on the topic."
+            }
+        ]
+    },
+    {
+        "strategy": 2,
+        "prompts": [
+            {
+                "version": "v0.5",
+                "prompt": "You generate clear, accurate examples for students of concepts. The students' level is {level} and the concept is {concept}. Provide a clear, multiple paragraph explanation of the concept using specific examples and give me five analogies I can use to understand the concept in different ways."
+            },
+            {
+                "version": "v1.0",
+                "prompt": "I would like to generate an educational explanation for a topic using a step-by-step approach, incorporating students' prior knowledge, and providing real-life examples and analogies. The students' level is {level} and the concept is {concept}. Then look up the concept and examples of the concept. Provide a clear, multiple paragraph explanation of the concept. Please break down the explanation into clear, sequential steps, enhancing comprehension. For each step or concept, provide a relevant real-life example or analogy to illustrate its application or significance. Conclude with a summary that reinforces the key points and offers follow-up questions to test understanding and promote further reflection on the topic."
+            },
+            {
+                "version": "v2.0",
+                "prompt": "I would like to generate an educational explanation for a topic using a step-by-step approach, incorporating students' prior knowledge, and providing real-life examples and analogies. The students' level is {level} and the concept is {concept}. Look up the concept and examples of the concept. Provide a clear, multiple paragraph explanation of the concept. Please break down the explanation into clear, sequential steps, enhancing comprehension. For each step or concept, provide a relevant real-life example or analogy to illustrate its application or significance. Conclude with a summary that reinforces the key points and offers follow-up questions to test understanding and promote further reflection on the topic."
+            },
+            {
+                "version": "v3.0",
+                "prompt": "I would like to generate an educational explanation for a topic incorporating students' prior knowledge and providing real-life examples and analogies. The students' level is {level} and the concept is {concept}. Look up the concept and examples of the concept. Provide a clear, multiple paragraph explanation of the concept using specific examples and give me five analogies I can use to understand the concept in different ways. Make the narrative fluid and coherent to enhance comprehension. Conclude with a summary that reinforces the key points and offers follow-up questions to test understanding and promote further reflection on the topic."
+            }
+        ]
+    }
+]

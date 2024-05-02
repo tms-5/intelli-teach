@@ -1,0 +1,82 @@
+[
+    {
+        "strategy": 1,
+        "forms": [
+            {
+                "type": "select",
+                "question": "What is the educational level of the students who will be learning this concept?",
+                "mandatory": true,
+                "key": "level",
+                "options": [
+                    "Grade 10",
+                    "Grade 11"
+                ]
+            },
+            {
+                "type": "select",
+                "question": "What subject is the concept from?",
+                "mandatory": true,
+                "key": "subject",
+                "options": [
+                    "Chemistry",
+                    "Physics",
+                    "Biology",
+                    "Mathematics",
+                    "Portuguese",
+                    "English",
+                    "History",
+                    "Geography",
+                    "Philosophy",
+                    "Sociology",
+                    "Physical Education"
+                ]
+            },
+            {
+                "type": "text",
+                "question": "What concept would you like me to generate examples for?",
+                "mandatory": true,
+                "key": "concept"
+            }
+        ]
+    },
+    {
+        "strategy": 2,
+        "forms": [
+            {
+                "type": "select",
+                "question": "What is the educational level of the students who will be learning this concept?",
+                "mandatory": true,
+                "key": "level",
+                "options": [
+                    "Grade 10",
+                    "Grade 11"
+                ]
+            },
+            {
+                "type": "select",
+                "question": "What subject is the concept from?",
+                "mandatory": true,
+                "key": "subject",
+                "options": [
+                    "Chemistry",
+                    "Physics",
+                    "Biology",
+                    "Mathematics",
+                    "Portuguese",
+                    "English",
+                    "History",
+                    "Geography",
+                    "Philosophy",
+                    "Sociology",
+                    "Physical Education"
+                ]
+            },
+            {
+                "type": "text",
+                "question": "What concept would you like me to generate explanations  for?",
+                "mandatory": true,
+                "key": "concept"
+            }
+        ]
+    }
+]

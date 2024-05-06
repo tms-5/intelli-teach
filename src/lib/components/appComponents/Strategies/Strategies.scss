@@ -1,0 +1,34 @@
+.strategies-container {
+  .wrapper-menu {
+    display: flow;
+    width: 20vw;
+    text-align: center;
+    .square-menu-strategy {
+      background-color: var(--medium-blue-400);
+      color: var(--light-blue-200);
+      font-weight: 600;
+      border: none;
+      text-align: left;
+      border-radius: 0.5rem;
+      height: min-content;
+      padding: 1.5rem 1rem;
+      margin-bottom: 1rem;
+      width: 80%;
+      cursor: pointer;
+      &.selected {
+        background-color: var(--light-blue-100);
+        color: var(--deep-blue-400);
+      }
+      &:hover {
+        background-color: var(--light-blue-200);
+        color: var(--deep-blue-400);
+      }
+    }
+  }
+  .card-container {
+    .text {
+      max-height: 68svh;
+      overflow-y: auto;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PromptGeneratorPage from "$lib/components/appComponents/PromptGenerator/PromptGeneratorPage.svelte";
+  import Main from "$lib/components/appComponents/Main/Main.svelte";
 </script>
 
-<PromptGeneratorPage />
+<Main />

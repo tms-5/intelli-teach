@@ -13,6 +13,7 @@
     | "tertiary"
     | "quaternary"
     | "senary"
+    | "septenary"
     | "octonary" = "default";
   export let title: string | undefined = undefined;
   export let label: string = "";

@@ -18,24 +18,25 @@
                 "mandatory": true,
                 "key": "subject",
                 "options": [
-                    "Chemistry",
-                    "Physics",
-                    "Biology",
-                    "Mathematics",
-                    "Portuguese",
-                    "English",
-                    "History",
-                    "Geography",
-                    "Philosophy",
-                    "Sociology",
-                    "Physical Education"
+                    "chemistry",
+                    "physics",
+                    "biology",
+                    "mathematics",
+                    "portuguese",
+                    "english",
+                    "history",
+                    "geography",
+                    "philosophy",
+                    "sociology",
+                    "physical education"
                 ]
             },
             {
                 "type": "text",
                 "question": "What concept would you like me to generate examples for?",
                 "mandatory": true,
-                "key": "concept"
+                "key": "concept",
+                "placeholder": "Type the concept here"
             }
         ]
     },
@@ -58,17 +59,17 @@
                 "mandatory": true,
                 "key": "subject",
                 "options": [
-                    "Chemistry",
-                    "Physics",
-                    "Biology",
-                    "Mathematics",
-                    "Portuguese",
-                    "English",
-                    "History",
-                    "Geography",
-                    "Philosophy",
-                    "Sociology",
-                    "Physical Education"
+                    "chemistry",
+                    "physics",
+                    "biology",
+                    "mathematics",
+                    "portuguese",
+                    "english",
+                    "history",
+                    "geography",
+                    "philosophy",
+                    "sociology",
+                    "physical education"
                 ]
             },
             {

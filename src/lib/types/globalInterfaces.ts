@@ -35,3 +35,8 @@ export interface StrategyPrompt {
   version: string;
   prompt: string;
 }
+
+export interface SelectOption {
+  value: any;
+  label: string;
+}

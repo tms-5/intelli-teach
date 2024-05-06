@@ -1,3 +1,13 @@
 .forms-prompt {
-    width: 80vw;
+  width: 75vw;
+  max-width: 900px;
+  min-height: 70svh;
+  border-radius: 30px;
+  background-color: var(--deep-blue-300);
+  align-content: space-between;
+  padding: 1.5rem;
+
+  > div {
+    width: 50vw;
+  }
 }

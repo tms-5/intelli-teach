@@ -1,4 +1,5 @@
 <script lang="ts">
+  import './PromptGeneratorPage.scss'
   import { setContext } from "svelte";
   import FormsSkeleton from "./FormsSkeleton/FormsSkeleton.svelte";
   import SelectStrategy from "./SelectStrategy/SelectStrategy.svelte";
@@ -17,8 +18,8 @@
   setContext("changeStep", changeStep);
 </script>
 
-<main class="d-flex w-100 justify-center p-3 c-white d-grid text-center">
-  <h1>IntelliTeach</h1>
+<main class="d-flex w-100 justify-center p-3 d-grid text-center">
+  <h1 class="c-white">IntelliTeach</h1>
   <FormsSkeleton>
     {#if current_step === 0}
       <SelectStrategy />

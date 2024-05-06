@@ -1,6 +1,8 @@
 <script lang="ts">
   import { getContext } from "svelte";
   import type { PromptGeneratorController } from "../controller";
+  import Select from "$lib/components/globalComponents/Select/Select.svelte";
+  import Button from "$lib/components/globalComponents/Button/Button.svelte";
 
   const PromptController: PromptGeneratorController =
     getContext("PromptController");
@@ -34,18 +36,27 @@
   ];
 </script>
 
-<div>
-  <label for="prompt">1- What strategy do you wanna choose?</label>
-  <select class="bg-light-blue-100 d-grid" on:change={handleChangeStrategy}>
-    <option value="0" class="d-none">Select a strategy</option>
-    {#each strategies as strategy}
-      <option
-        value={strategy.value}
-        selected={selectedStrategy == strategy.value}>{strategy.text}</option
-      >
-    {/each}
-  </select>
+<div class="text-start">
+  <label for="prompt" class="c-light-blue-100 fw-700"
+    >1- What strategy do you want to choose?</label
+  >
+  <div class="mt-1r" />
+  <Select
+    options={strategies.map((strategy) => ({
+      ...strategy,
+      label: strategy.text,
+    }))}
+    defaultValue={selectedStrategy}
+    id="selectStrategy"
+    onChangeValue={(label, value) =>
+      handleChangeStrategy({ currentTarget: { value } })}
+  />
 </div>
-<div class="d-flex">
-  <button on:click={() => changeStep(1)} class="w-auto">Next</button>
+<div class="d-flex justify-end">
+  <Button
+    label="Next"
+    onClick={() => changeStep(1)}
+    className="w-auto"
+    style="senary"
+  />
 </div>

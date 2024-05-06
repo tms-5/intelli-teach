@@ -4,6 +4,7 @@
   import type { PromptGeneratorController } from "../controller";
   import { getPromptForStrategy } from "./controller";
   import type { StrategyPrompt } from "$lib/types/globalInterfaces";
+  import Select from "$lib/components/globalComponents/Select/Select.svelte";
 
   const PromptController: PromptGeneratorController =
     getContext("PromptController");
@@ -12,33 +13,26 @@
     all_prompts
   );
 
-  let selectedPrompt = prompts?.[0] ?? null;
   let text = "";
 
-  function handleSelectChange(event: Event) {
-    const targetValue = (event.target as HTMLSelectElement).selectedIndex - 1;
-    selectedPrompt = prompts?.[targetValue] ?? null;
-    text = PromptController.getCustomText(selectedPrompt?.prompt ?? "");
+  function handleSelectChange(value: string) {
+    const targetValue = prompts?.filter(
+      (prompt) => prompt.version === value
+    )[0];
+    text = PromptController.getCustomText(targetValue?.prompt ?? "");
   }
 </script>
 
-<div class="justify-center">
-  <h1>The Prompt</h1>
-  <div class="d-grid justify-center">
-    <label for="context">Context:</label>
-    <select
-      class="bg-light-blue-100 d-grid"
-      id="context"
-      on:change={handleSelectChange}
-    >
-      <option value="0" class="d-none">Select a version</option>
-      {#if prompts}
-        {#each prompts as prompt}
-          <option value={prompt.version}>{prompt.version}</option>
-        {/each}
-      {/if}
-    </select>
-  </div>
+<h1 class="c-light-purple-50">The Prompt</h1>
 
-  <p class="text-start">{text}</p>
-</div>
+<label for="context" class="c-light-purple-100">Version:</label>
+<Select
+  id="context"
+  options={prompts?.map((prompt) => ({
+    value: prompt.version,
+    label: prompt.version,
+  })) ?? []}
+  onChangeValue={(label, value) => handleSelectChange(value)}
+/>
+
+<p class="text-start c-light-purple-50">{text}</p>

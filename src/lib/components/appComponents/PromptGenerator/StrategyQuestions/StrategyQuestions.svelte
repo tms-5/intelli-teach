@@ -4,6 +4,9 @@
   import type { QuestionsPromptForms } from "$lib/types/globalInterfaces";
   import { debounce } from "$lib/utils/functions";
   import type { PromptGeneratorController } from "../controller";
+  import Button from "$lib/components/globalComponents/Button/Button.svelte";
+  import Select from "$lib/components/globalComponents/Select/Select.svelte";
+  import Input from "$lib/components/globalComponents/Input/Input.svelte";
 
   let disabled = true;
   const changeStep = getContext<(arg0: number) => void>("changeStep");
@@ -20,40 +23,55 @@
     answers = PromptController.getFormsData;
   });
 
-  function handleAnswer(question: QuestionsPromptForms, event: Event) {
-    const { value } = event.target as HTMLInputElement | HTMLSelectElement;
+  function handleAnswer(
+    question: QuestionsPromptForms,
+    value: string | number
+  ) {
     disabled = PromptController.changeForm(question.key, value);
   }
 
   const debouncedUpdate = debounce(handleAnswer, 200);
 </script>
 
-<div class="gap-1r d-grid">
+<div class="gap-1r d-grid text-start">
   {#each questions as question}
     <div class="d-grid">
-      <label for="prompt">{question.question}</label>
+      <label for="prompt" class="c-light-blue-100 fw-700"
+        >{question.question}</label
+      >
+      <div class="mt-1r" />
       {#if question.type === "select"}
-        <select
-          class="bg-light-blue-100 d-grid"
-          bind:value={answers[question.key]}
-          on:change={(event) => handleAnswer(question, event)}
-        >
-          <option value="-1" class="d-none" selected>Select an option</option>
-          {#each question.options as option}
-            <option value={option}>{option}</option>
-          {/each}
-        </select>
+        <Select
+          options={question.options.map((option) => ({
+            value: option,
+            label: option,
+          }))}
+          defaultValue={answers[question.key]}
+          onChangeValue={(label, value) => handleAnswer(question, value)}
+        />
       {:else if question.type === "text"}
-        <input
-          type="text"
-          bind:value={answers[question.key]}
-          on:input={(event) => debouncedUpdate(question, event)}
+        <Input
+          id={question.key}
+          value={answers[question.key]}
+          onChange={(name, value) => debouncedUpdate(question, value)}
+          placeholder={question.placeholder}
         />
       {/if}
     </div>
   {/each}
 </div>
 <div class="d-flex justify-s-b w-100">
-  <button on:click={() => changeStep(0)} class="w-auto">Back</button>
-  <button on:click={() => changeStep(2)} class="w-auto" {disabled}>Next</button>
+  <Button
+    label="Back"
+    onClick={() => changeStep(0)}
+    className="w-auto"
+    style="quaternary"
+  />
+  <Button
+    label="Next"
+    onClick={() => changeStep(2)}
+    className="w-auto"
+    style="senary"
+    {disabled}
+  />
 </div>

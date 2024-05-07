@@ -19,7 +19,7 @@
 </script>
 
 <nav class="d-flex justify-s-b pl-1r pr-1r bg-deep-blue-300 mb-2r align-center">
-  <div class="d-flex align-center">
+  <div class="d-flex align-center c-pointer" on:click={() => goto("/")}>
     <img src={logo} height="40" alt="Logo" />
     <div class="c-light-blue-200 f-1-1">
       <span class="c-white fw-800">GO</span>Teacher

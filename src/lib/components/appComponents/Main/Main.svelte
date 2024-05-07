@@ -34,7 +34,7 @@
   <div class="d-flex gap-1r">
     <Button
       label="Learn More About The Strategies"
-      onClick={() => goto("/prompt-generator")}
+      onClick={() => goto("/strategies")}
       className="w-auto"
       style="default"
     />

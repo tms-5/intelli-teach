@@ -1,2 +1,2 @@
-# intelli-teach
+# GO-teach
  

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
+  import logo from "$lib/assets/img/logo.png";
 
   $: currentPath = $page.url.pathname;
 
@@ -17,8 +18,13 @@
   ];
 </script>
 
-<nav class="d-flex justify-s-b pl-1r pr-1r bg-deep-blue-300 mb-2r">
-  <h3 class="c-light-purple-25">IntelliTeach</h3>
+<nav class="d-flex justify-s-b pl-1r pr-1r bg-deep-blue-300 mb-2r align-center">
+  <div class="d-flex align-center">
+    <img src={logo} height="40" alt="Logo" />
+    <div class="c-light-blue-200 f-1-1">
+      <span class="c-white fw-800">GO</span>Teacher
+    </div>
+  </div>
   <ul class="d-flex gap-1r">
     {#each routes as { name, path }, i}
       <li>

@@ -1,7 +1,7 @@
 <script>
+  import logo from "$lib/assets/img/logo.png";
   import { goto } from "$app/navigation";
   import Button from "$lib/components/globalComponents/Button/Button.svelte";
-  import Caroussel from "$lib/components/globalComponents/Caroussel/Caroussel.svelte";
 
   const slides = [
     { component: "Slide 1", number: 1 },
@@ -12,7 +12,9 @@
 
 <section class="d-grid justify-items-center pb-2r">
   <div class="w-80">
-    <div class="fw-800 f-2 c-light-blue-200 text-center">IntelliTeach</div>
+    <div class="fw-800 f-2 c-light-blue-100 text-center align-center d-flex justify-center">
+      <img src={logo} height="40" alt="Logo" /> <span class="c-light-blue-200">GO</span>Teach
+    </div>
     <p class="c-light-purple-50">
       The developed tool aims to facilitate the implementation of evidence-based
       teaching strategies in the context of high school education, integrating

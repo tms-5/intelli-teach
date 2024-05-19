@@ -32,5 +32,23 @@
                 "prompt": "I would like to generate an educational explanation for a topic incorporating students' prior knowledge and providing real-life examples and analogies. The students' level is {level} and the concept is {concept}. Look up the concept and examples of the concept. Provide a clear, multiple paragraph explanation of the concept using specific examples and give me five analogies I can use to understand the concept in different ways. Make the narrative fluid and coherent to enhance comprehension. Conclude with a summary that reinforces the key points and offers follow-up questions to test understanding and promote further reflection on the topic."
             }
         ]
+    },
+    {
+        "strategy": 3,
+        "prompts": [
+            {
+                "version": "v0.5",
+                "prompt": "As a {subject} teaching advisor, I need your help to create a highly diagnostic quizzes. I would like you to look up how to do good low-stakes tests and diagnositcs. The questions should be highly relevant and go beyond just facts. Multiple choice questions should include plausible, competitive alternate responses and should not include an 'all of the above option.' At the end of the quiz, you will provide an answer key and explain the right answer. The students' level is {level} and the concept is {concept}."
+            }
+        ]
+    },
+    {
+        "strategy": 4,
+        "prompts": [
+            {
+                "version": "v0.5",
+                "prompt": "I am a teacher who wants to understand what students found most important about my class and what they are confused by. Review these responses and identify common themes and patterns in student responses. Summarize responses and list the 3 key points students found most important about the class and 3 areas of confusion: {text}"
+            }
+        ]
     }
 ]

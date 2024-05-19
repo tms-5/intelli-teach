@@ -31,6 +31,15 @@
   }
 
   const debouncedUpdate = debounce(handleAnswer, 200);
+
+  function returnString(value: string | number | boolean | string[]) {
+    return value.toString();
+  }
+
+  function handleAnswerTextArea(question: QuestionsPromptForms, event: Event) {
+    const value = (event.target as HTMLTextAreaElement).value;
+    disabled = PromptController.changeForm(question.key, value);
+  }
 </script>
 
 <div class="gap-1r d-grid text-start">
@@ -56,6 +65,14 @@
           onChange={(name, value) => debouncedUpdate(question, value)}
           placeholder={question.placeholder}
         />
+      {:else if question.type === "text-area"}
+        <textarea
+          id={question.key}
+          value={returnString(answers[question.key])}
+          on:input={(event) => handleAnswerTextArea(question, event)}
+          placeholder={question.placeholder}
+          class="w-100 p-1r"
+        ></textarea>
       {/if}
     </div>
   {/each}

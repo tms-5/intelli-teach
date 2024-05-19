@@ -74,9 +74,87 @@
             },
             {
                 "type": "text",
-                "question": "What concept would you like me to generate explanations  for?",
+                "question": "What concept would you like me to generate explanations for?",
                 "mandatory": true,
                 "key": "concept"
+            }
+        ]
+    },
+    {
+        "strategy": 3,
+        "forms": [
+            {
+                "type": "select",
+                "question": "What is the educational level of the students who will be learning this concept?",
+                "mandatory": true,
+                "key": "level",
+                "options": [
+                    "Grade 10",
+                    "Grade 11"
+                ]
+            },
+            {
+                "type": "select",
+                "question": "What subject is the concept from?",
+                "mandatory": true,
+                "key": "subject",
+                "options": [
+                    "chemistry",
+                    "physics",
+                    "biology",
+                    "mathematics",
+                    "portuguese",
+                    "english",
+                    "history",
+                    "geography",
+                    "philosophy",
+                    "sociology",
+                    "physical education"
+                ]
+            },
+            {
+                "type": "text",
+                "question": "What concept would you like me to generate the quiz?",
+                "mandatory": true,
+                "key": "concept"
+            }
+        ]
+    },
+    {
+        "strategy": 4,
+        "forms": [
+            {
+                "type": "text-area",
+                "question": "Insert the text you would like me to summarize",
+                "mandatory": true,
+                "key": "text"
+            }
+        ]
+    },
+    {
+        "strategy": 5,
+        "forms": [
+            {
+                "type": "select",
+                "question": "What is the educational level of the students who will be learning this concept?",
+                "mandatory": true,
+                "key": "level",
+                "options": [
+                    "Grade 10",
+                    "Grade 11"
+                ]
+            },
+            {
+                "type": "input",
+                "question": "What is the current topic you are teaching?",
+                "mandatory": true,
+                "key": "text"
+            },
+            {
+                "type": "input",
+                "question": "What is the past topic you want to include in the distributed pratice?",
+                "mandatory": true,
+                "key": "text"
             }
         ]
     }
